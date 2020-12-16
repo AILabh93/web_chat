@@ -13,11 +13,8 @@ from rest_framework.response import Response
 
 # Create your views here.
 
-path = models.ModelThemDau.objects.get(id = 2).model_h5.path
+path = models.ModelThemDau.objects.get(id = 1).model_h5.path
 model = load_model(path)
-
-def login(request):
-    return render(request, 'login.html')
 
 
 def getResponse(question):
