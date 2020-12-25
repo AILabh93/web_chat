@@ -89,9 +89,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Chat_Bot',
-        'CLIENT': {
-           'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/test?authSource=admin&replicaSet=atlas-tx0c2e-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
-        }
+        # 'CLIENT': {
+        #    'host': 'mongodb+srv://ailab:ailabh93@cluster0.e1s3a.mongodb.net/test?authSource=admin&replicaSet=atlas-tx0c2e-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
+        # }
     }
 }
 
