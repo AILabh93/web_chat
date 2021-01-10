@@ -10,21 +10,21 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 
-
 # Create your views here.
 
-path = models.ModelThemDau.objects.get(id = 1).model_h5.path
+path = models.ModelThemDau.objects.get(id=1).model_h5.path
 model = load_model(path)
 
 
 def getResponse(question):
     data = json.dumps({"message": "%s" % question, "sender": "Me"})
     p = requests.post('http://localhost:5005/webhooks/rest/webhook',
-                        headers={"Content-Type": "application/json"}, data=data).json()
+                      headers={"Content-Type": "application/json"}, data=data).json()
     try:
         return p[0]['text']
     except:
         return "không hiểu"
+
 
 class Home(View):
     def get(self, request):
@@ -44,9 +44,3 @@ class Home(View):
 def get_chat_content(request):
     chat = models.ChatContent.objects.all()
     return render(request, 'chat_content.html', {'chat': chat})
-
-
-
-
-
-        
